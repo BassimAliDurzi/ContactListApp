@@ -3,7 +3,7 @@ using Business.Models;
 
 namespace Business.Interfaces
 {
-    public interface IContactService1
+    public interface IContactService
     {
         IEnumerable<Contact> GetAll();
         bool save(ContactForm form);
