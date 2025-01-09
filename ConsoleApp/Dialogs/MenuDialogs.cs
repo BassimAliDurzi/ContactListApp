@@ -88,6 +88,7 @@ public class MenuDialogs(IContactService contactService)
         {
             count++;
             Console.WriteLine($"Contact: {count}" +
+                $"\n " +
                 $"\n{contact.FirstName} {contact.LastName}" +
                 $"\n{contact.Email}" +
                 $"\n{contact.PhoneNumber}" +
@@ -117,9 +118,9 @@ public class MenuDialogs(IContactService contactService)
         while (true)
         {
             Console.Write($"{fieldName}: ");
-            string input = Console.ReadLine() ?? null!;
+            string input =(Console.ReadLine() ?? string.Empty).Trim();
 
-            if(Regex.IsMatch(input, @"^[a-zA-z]+$"))
+            if(Regex.IsMatch(input, @"^[a-zA-ZåäöÅÄÖ]+$"))
             {
                 return input;
             }
@@ -135,7 +136,7 @@ public class MenuDialogs(IContactService contactService)
         while (true)
         {
             Console.Write($"{fieldName}: ");
-            string input = Console.ReadLine() ?? null!;
+            string input = (Console.ReadLine() ?? string.Empty).Trim();
 
             if (Regex.IsMatch(input, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
             {
@@ -153,7 +154,7 @@ public class MenuDialogs(IContactService contactService)
         while (true)
         {
             Console.Write($"{fieldName}: ");
-            string input = Console.ReadLine() ?? null!;
+            string input = (Console.ReadLine() ?? string.Empty).Trim();
 
             if (Regex.IsMatch(input, @"^\d{10}$"))
             {
@@ -171,9 +172,9 @@ public class MenuDialogs(IContactService contactService)
         while (true)
         {
             Console.Write($"{fieldName}: ");
-            string input = Console.ReadLine() ?? null!;
+            string input = (Console.ReadLine() ?? string.Empty).Trim();
 
-            if (Regex.IsMatch(input, @"^[a-zA-Z0-9\s]+$"))
+            if (Regex.IsMatch(input, @"^[a-zA-ZåäöÅÄÖ0-9\s]+$"))
             {
                 return input;
             }
@@ -189,7 +190,7 @@ public class MenuDialogs(IContactService contactService)
         while (true)
         {
             Console.Write($"{fieldName}: ");
-            string input = Console.ReadLine() ?? null!;
+            string input = (Console.ReadLine() ?? string.Empty).Trim();
 
             if (Regex.IsMatch(input, @"^\d{5}$"))
             {
