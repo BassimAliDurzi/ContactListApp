@@ -1,0 +1,12 @@
+D:\Cources\.NET webbutvecklare - EC\03 C#\ContactListApp\Business\bin\Debug\net9.0\Business.deps.json
+D:\Cources\.NET webbutvecklare - EC\03 C#\ContactListApp\Business\bin\Debug\net9.0\Business.dll
+D:\Cources\.NET webbutvecklare - EC\03 C#\ContactListApp\Business\bin\Debug\net9.0\Business.pdb
+D:\Cources\.NET webbutvecklare - EC\03 C#\ContactListApp\Business\obj\Debug\net9.0\Business.GeneratedMSBuildEditorConfig.editorconfig
+D:\Cources\.NET webbutvecklare - EC\03 C#\ContactListApp\Business\obj\Debug\net9.0\Business.AssemblyInfoInputs.cache
+D:\Cources\.NET webbutvecklare - EC\03 C#\ContactListApp\Business\obj\Debug\net9.0\Business.AssemblyInfo.cs
+D:\Cources\.NET webbutvecklare - EC\03 C#\ContactListApp\Business\obj\Debug\net9.0\Business.csproj.CoreCompileInputs.cache
+D:\Cources\.NET webbutvecklare - EC\03 C#\ContactListApp\Business\obj\Debug\net9.0\Business.sourcelink.json
+D:\Cources\.NET webbutvecklare - EC\03 C#\ContactListApp\Business\obj\Debug\net9.0\Business.dll
+D:\Cources\.NET webbutvecklare - EC\03 C#\ContactListApp\Business\obj\Debug\net9.0\refint\Business.dll
+D:\Cources\.NET webbutvecklare - EC\03 C#\ContactListApp\Business\obj\Debug\net9.0\Business.pdb
+D:\Cources\.NET webbutvecklare - EC\03 C#\ContactListApp\Business\obj\Debug\net9.0\ref\Business.dll

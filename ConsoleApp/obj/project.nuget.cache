@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "8xjfrnuhS7M=",
+  "success": true,
+  "projectFilePath": "D:\\Cources\\.NET webbutvecklare - EC\\03 C#\\ContactListApp\\ConsoleApp\\ConsoleApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\bassi\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\9.0.0\\microsoft.extensions.dependencyinjection.9.0.0.nupkg.sha512",
+    "C:\\Users\\bassi\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.0\\microsoft.extensions.dependencyinjection.abstractions.9.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
