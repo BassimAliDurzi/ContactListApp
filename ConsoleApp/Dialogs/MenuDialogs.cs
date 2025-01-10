@@ -120,7 +120,7 @@ public class MenuDialogs(IContactService contactService)
             Console.Write($"{fieldName}: ");
             string input =(Console.ReadLine() ?? string.Empty).Trim();
 
-            if(Regex.IsMatch(input, @"^[a-zA-ZåäöÅÄÖ]+$"))
+            if(Regex.IsMatch(input, @"^[a-zA-ZåäöÅÄÖ-]+$"))
             {
                 return input;
             }
