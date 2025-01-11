@@ -11,6 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Business.Models;
+using ContactListMainApp.ViewModels;
 
 namespace ContactListMainApp
 {
@@ -19,33 +20,12 @@ namespace ContactListMainApp
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        public MainWindow(MainViewModel viewModel)
         {
             InitializeComponent();
+            DataContext = viewModel;
 
         }
 
-        private void AddContact_Click(object sender, RoutedEventArgs e)
-        {
-            var contact = new Contact()
-            {
-                FirstName = FirstName.Text,
-                LastName = LastName.Text,
-                Email = Email.Text,
-                PhoneNumber = PhoneNumber.Text,
-                Street = Street.Text,
-                PostalCode = PostalCode.Text,
-                City = City.Text,
-            };
-
-            ContactsList.Items.Add(contact);
-            FirstName.Clear();
-            LastName.Clear();
-            Email.Clear();
-            PhoneNumber.Clear();
-            Street.Clear();
-            PostalCode.Clear();
-            City.Clear();
-        }
     }
 }
