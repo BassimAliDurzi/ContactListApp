@@ -7,10 +7,10 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Views\AddContactView.xaml.cs">
+    <Compile Update="Views\ContactAddView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\ContactsView.xaml.cs">
+    <Compile Update="Views\ContactsListView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -18,10 +18,10 @@
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\AddContactView.xaml">
+    <Page Update="Views\ContactAddView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\ContactsView.xaml">
+    <Page Update="Views\ContactsListView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

@@ -1,0 +1,20 @@
+﻿MainApp
+1.0.0.0
+
+winexe
+C#
+.cs
+D:\Cources\.NET webbutvecklare - EC\03 C#\ContactListApp\ContactListMainApp\obj\Debug\net9.0-windows\
+MainApp
+none
+false
+TRACE;DEBUG;NET;NET9_0;NETCOREAPP
+D:\Cources\.NET webbutvecklare - EC\03 C#\ContactListApp\ContactListMainApp\App.xaml
+3-545500618
+
+11-879126217
+2382076870255
+MainWindow.xaml;Views\AddContactView.xaml;Views\ContactsView.xaml;
+
+True
+

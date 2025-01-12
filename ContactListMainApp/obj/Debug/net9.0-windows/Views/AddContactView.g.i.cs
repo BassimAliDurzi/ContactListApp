@@ -55,7 +55,7 @@ namespace ContactListMainApp.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ContactListMainApp;component/views/addcontactview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ContactListMainApp;V1.0.0.0;component/views/addcontactview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\AddContactView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

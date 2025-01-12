@@ -1,6 +1,8 @@
 ﻿using System.Configuration;
 using System.Data;
 using System.Windows;
+using Business.Interfaces;
+using Business.Services;
 using ContactListMainApp.ViewModels;
 using ContactListMainApp.Views;
 using Microsoft.Extensions.DependencyInjection;
@@ -18,13 +20,16 @@ public partial class App : Application
         _host = Host.CreateDefaultBuilder()
             .ConfigureServices(services =>
             {
+                services.AddSingleton<IFileService>(new FileService(AppDomain.CurrentDomain.BaseDirectory, "contacts.json"));
+                services.AddTransient<IContactService, ContactService>();
+
                 services.AddSingleton<MainViewModel>();
                 services.AddSingleton<MainWindow>();
 
-                services.AddSingleton<ContactsViewModel>();
+                services.AddSingleton<ContactsListViewModel>();
                 services.AddSingleton<ContactsView>();
 
-                services.AddSingleton<AddContactViewModel>();
+                services.AddSingleton<ContactAddViewModel>();
                 services.AddSingleton<AddContactView>();
             })
             .Build();
@@ -32,6 +37,8 @@ public partial class App : Application
 
     protected override void  OnStartup(StartupEventArgs e)
     {
+
+
         var mainWindow = _host.Services.GetRequiredService<MainWindow>();
         mainWindow.Show();
     }

@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="ContactListMainApp.Views.ContactsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ContactListMainApp.Views"
+             xmlns:viewmodels="clr-namespace:ContactListMainApp.ViewModels"
+             xmlns:models="clr-namespace:Business.Models;assembly=Business"
+             d:DataContext="{d:DesignInstance Type=viewmodels:ContactsListViewModel}"
+             
+             
+             mc:Ignorable="d" 
+             Background="White"
+             d:DesignHeight="800" d:DesignWidth="500">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Contacts List" HorizontalAlignment="Center" FontSize="20" FontFamily="Georgia Pro Cond Black" FontWeight="Bold"/>
+
+        <ListView Grid.Row="1" ItemsSource="{Binding Contacts}" Margin="0 20">
+            <ListView.ItemTemplate>
+                <DataTemplate DataType="models:Contact">
+
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
+
+        <Button Grid.Row="2" Padding="8" Width="150" Content="Create New Contact" Command="{Binding GoToAddContactCommand}"  FontWeight="Bold" FontFamily="Georgia Pro Cond Black"/>
+
+    </Grid>
+</UserControl>

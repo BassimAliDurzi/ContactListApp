@@ -9,6 +9,7 @@
         xmlns:views="clr-namespace:ContactListMainApp.Views"
         xmlns:models="clr-namespace:ContactListMainApp.ViewModels"
         d:DataContext="{d:DesignInstance Type=models:MainViewModel}"
+        
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         Title="Contacts List Application" Height="800" Width="500">
@@ -19,11 +20,11 @@
         <ContentControl Content="{Binding CurrentViewModel}">
             <ContentControl.Resources>
                 
-                <DataTemplate DataType="{x:Type models:ContactsViewModel}">
+                <DataTemplate DataType="{x:Type models:ContactsListViewModel}">
                     <views:ContactsView/>
                 </DataTemplate>
 
-                <DataTemplate DataType="{x:Type models:AddContactViewModel}">
+                <DataTemplate DataType="{x:Type models:ContactAddViewModel}">
                     <views:AddContactView/>
                 </DataTemplate>
 

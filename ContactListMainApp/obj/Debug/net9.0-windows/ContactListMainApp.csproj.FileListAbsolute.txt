@@ -26,9 +26,7 @@ D:\Cources\.NET webbutvecklare - EC\03 C#\ContactListApp\ContactListMainApp\obj\
 D:\Cources\.NET webbutvecklare - EC\03 C#\ContactListApp\ContactListMainApp\bin\Debug\net9.0-windows\CommunityToolkit.Mvvm.dll
 D:\Cources\.NET webbutvecklare - EC\03 C#\ContactListApp\ContactListMainApp\bin\Debug\net9.0-windows\Microsoft.Extensions.DependencyInjection.dll
 D:\Cources\.NET webbutvecklare - EC\03 C#\ContactListApp\ContactListMainApp\bin\Debug\net9.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-D:\Cources\.NET webbutvecklare - EC\03 C#\ContactListApp\ContactListMainApp\obj\Debug\net9.0-windows\Views\ContactsView.g.cs
 D:\Cources\.NET webbutvecklare - EC\03 C#\ContactListApp\ContactListMainApp\obj\Debug\net9.0-windows\GeneratedInternalTypeHelper.g.cs
-D:\Cources\.NET webbutvecklare - EC\03 C#\ContactListApp\ContactListMainApp\obj\Debug\net9.0-windows\Views\ContactsView.baml
 D:\Cources\.NET webbutvecklare - EC\03 C#\ContactListApp\ContactListMainApp\bin\Debug\net9.0-windows\Microsoft.Extensions.Configuration.dll
 D:\Cources\.NET webbutvecklare - EC\03 C#\ContactListApp\ContactListMainApp\bin\Debug\net9.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
 D:\Cources\.NET webbutvecklare - EC\03 C#\ContactListApp\ContactListMainApp\bin\Debug\net9.0-windows\Microsoft.Extensions.Configuration.Binder.dll
@@ -54,5 +52,7 @@ D:\Cources\.NET webbutvecklare - EC\03 C#\ContactListApp\ContactListMainApp\bin\
 D:\Cources\.NET webbutvecklare - EC\03 C#\ContactListApp\ContactListMainApp\bin\Debug\net9.0-windows\Microsoft.Extensions.Options.dll
 D:\Cources\.NET webbutvecklare - EC\03 C#\ContactListApp\ContactListMainApp\bin\Debug\net9.0-windows\Microsoft.Extensions.Options.ConfigurationExtensions.dll
 D:\Cources\.NET webbutvecklare - EC\03 C#\ContactListApp\ContactListMainApp\bin\Debug\net9.0-windows\Microsoft.Extensions.Primitives.dll
-D:\Cources\.NET webbutvecklare - EC\03 C#\ContactListApp\ContactListMainApp\obj\Debug\net9.0-windows\Views\AddContactView.g.cs
-D:\Cources\.NET webbutvecklare - EC\03 C#\ContactListApp\ContactListMainApp\obj\Debug\net9.0-windows\Views\AddContactView.baml
+D:\Cources\.NET webbutvecklare - EC\03 C#\ContactListApp\ContactListMainApp\obj\Debug\net9.0-windows\Views\ContactsListView.g.cs
+D:\Cources\.NET webbutvecklare - EC\03 C#\ContactListApp\ContactListMainApp\obj\Debug\net9.0-windows\Views\ContactsListView.baml
+D:\Cources\.NET webbutvecklare - EC\03 C#\ContactListApp\ContactListMainApp\obj\Debug\net9.0-windows\Views\ContactAddView.g.cs
+D:\Cources\.NET webbutvecklare - EC\03 C#\ContactListApp\ContactListMainApp\obj\Debug\net9.0-windows\Views\ContactAddView.baml
