@@ -6,6 +6,6 @@ namespace Business.Interfaces
     public interface IContactService
     {
         IEnumerable<Contact> GetAll();
-        bool save(ContactForm form);
+        bool Create(ContactForm form);
     }
 }

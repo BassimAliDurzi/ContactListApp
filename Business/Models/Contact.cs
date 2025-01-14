@@ -14,5 +14,6 @@ public class Contact
     public string City { get; set; } = null!;
 
     public string FullName => $"{FirstName} {LastName}";
+    public string ContactInfo => $"{Email}, {PhoneNumber}";
     public string Address => $"{Street}, {PostalCode} {City}";
 }

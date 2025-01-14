@@ -20,24 +20,25 @@ public partial class App : Application
         _host = Host.CreateDefaultBuilder()
             .ConfigureServices(services =>
             {
-                services.AddSingleton<IFileService>(new FileService(AppDomain.CurrentDomain.BaseDirectory, "contacts.json"));
-                services.AddTransient<IContactService, ContactService>();
+                services.AddSingleton<IFileService>(new FileService(@"C:\Users\bassi\OneDrive\Desktop", "contacts.json"));
+                services.AddSingleton<IContactService, ContactService>();
 
                 services.AddSingleton<MainViewModel>();
                 services.AddSingleton<MainWindow>();
 
-                services.AddSingleton<ContactsListViewModel>();
-                services.AddSingleton<ContactsView>();
+                services.AddTransient<ContactsListViewModel>();
+                services.AddTransient<ContactsView>();
 
-                services.AddSingleton<ContactAddViewModel>();
-                services.AddSingleton<AddContactView>();
+                services.AddTransient<ContactAddViewModel>();
+                services.AddTransient<AddContactView>();
             })
             .Build();
     }
 
     protected override void  OnStartup(StartupEventArgs e)
     {
-
+        var mainViewModel = _host.Services.GetRequiredService<MainViewModel>();
+        mainViewModel.CurrentViewModel = _host.Services.GetRequiredService<ContactsListViewModel>();
 
         var mainWindow = _host.Services.GetRequiredService<MainWindow>();
         mainWindow.Show();

@@ -1,16 +1,34 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿using Business.Dtos;
+using Business.Interfaces;
+using Business.Models;
+using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace ContactListMainApp.ViewModels;
 
-public partial class ContactAddViewModel : ObservableObject
+public partial class ContactAddViewModel(IContactService contactService, IServiceProvider serviceProvider) : ObservableObject
 {
-
-    private readonly IServiceProvider _serviceProvider;
+    private readonly IContactService _contactService = contactService;
+    private readonly IServiceProvider _serviceProvider = serviceProvider;
 
     [ObservableProperty]
-    private string _title = "Add New Contact";
+    private ContactForm _contact = new();
+
+
+    [RelayCommand]
+    private void Save()
+    {
+        var result = _contactService.Create(Contact);
+        if (result)
+        {
+            Contact = new ContactForm();
+
+            var mainViewModel = _serviceProvider.GetRequiredService<MainViewModel>();
+            mainViewModel.CurrentViewModel = _serviceProvider.GetRequiredService<ContactsListViewModel>();
+        }
+    }
+
 
     [RelayCommand]
     private void GoToContacts()
@@ -19,9 +37,4 @@ public partial class ContactAddViewModel : ObservableObject
         mainViewModel.CurrentViewModel = _serviceProvider.GetRequiredService<ContactsListViewModel>();
     }
 
-
-    public ContactAddViewModel(IServiceProvider serviceProvider)
-    {
-        _serviceProvider = serviceProvider;
-    }
 }

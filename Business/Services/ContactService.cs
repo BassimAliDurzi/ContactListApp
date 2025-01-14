@@ -28,7 +28,7 @@ public class ContactService(IFileService fileService) : IContactService
         return _contacts;
     }
 
-    public bool save(ContactForm form)
+    public bool Create(ContactForm form)
     {
         try
         {

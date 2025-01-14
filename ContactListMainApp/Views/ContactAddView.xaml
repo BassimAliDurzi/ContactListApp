@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ContactListMainApp.Views"
              xmlns:viewmodles="clr-namespace:ContactListMainApp.ViewModels"
+             xmlns:models="clr-namespace:Business.Models;assembly=Business"
              d:DataContext="{d:DesignInstance Type=viewmodles:ContactAddViewModel}"
              
              mc:Ignorable="d"
@@ -31,34 +32,34 @@
 
         <StackPanel Grid.Row="1" Orientation="Horizontal">
             <Label Content="First Name" Width="100" HorizontalAlignment="Left" VerticalAlignment="Center" Padding="10" FontWeight="Bold"/>
-            <TextBox x:Name="FirstName" Padding="10" Width="300" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <TextBox Text="{Binding Contact.FirstName}" x:Name="FirstName" Padding="10" Width="300" HorizontalAlignment="Left" VerticalAlignment="Center"/>
         </StackPanel>
         <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,46,0,46" Grid.RowSpan="3">
             <Label Content="Last Name" Width="100" HorizontalAlignment="Left" VerticalAlignment="Center" Padding="10" FontWeight="Bold"/>
-            <TextBox x:Name="LastName" Padding="10" Width="300" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <TextBox Text="{Binding Contact.LastName}" x:Name="LastName" Padding="10" Width="300" HorizontalAlignment="Left" VerticalAlignment="Center"/>
         </StackPanel>
         <StackPanel Grid.Row="3" Orientation="Horizontal" Grid.ColumnSpan="3">
             <Label Content="Email" Width="100" HorizontalAlignment="Left" VerticalAlignment="Center" Padding="10" FontWeight="Bold"/>
-            <TextBox x:Name="Email" Padding="10" Width="300" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <TextBox Text="{Binding Contact.Email}" x:Name="Email" Padding="10" Width="300" HorizontalAlignment="Left" VerticalAlignment="Center"/>
         </StackPanel>
         <StackPanel Grid.Row="3" Orientation="Horizontal" Grid.ColumnSpan="3" Margin="0,46,0,46" Grid.RowSpan="3">
             <Label Content="Phone No." Width="100" HorizontalAlignment="Left" VerticalAlignment="Center" Padding="10" FontWeight="Bold"/>
-            <TextBox x:Name="PhoneNumber" Padding="10" Width="300" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <TextBox Text="{Binding Contact.PhoneNumber}" x:Name="PhoneNumber" Padding="10" Width="300" HorizontalAlignment="Left" VerticalAlignment="Center"/>
         </StackPanel>
         <StackPanel Grid.Row="5" Orientation="Horizontal" Grid.ColumnSpan="3">
             <Label Content="Street" Width="100" HorizontalAlignment="Left" VerticalAlignment="Center" Padding="10" FontWeight="Bold"/>
-            <TextBox x:Name="Street" Padding="10" Width="300" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <TextBox Text="{Binding Contact.Street}" x:Name="Street" Padding="10" Width="300" HorizontalAlignment="Left" VerticalAlignment="Center"/>
         </StackPanel>
         <StackPanel Grid.Row="5" Orientation="Horizontal" Grid.ColumnSpan="3" Margin="0,46,0,46" Grid.RowSpan="3">
             <Label Content="Postal Code" Width="100" HorizontalAlignment="Left" VerticalAlignment="Center" Padding="10" FontWeight="Bold"/>
-            <TextBox x:Name="PostalCode" Padding="10" Width="300" HorizontalAlignment="Left" VerticalAlignment="Center" FontWeight="Bold"/>
+            <TextBox Text="{Binding Contact.PostalCode}" x:Name="PostalCode" Padding="10" Width="300" HorizontalAlignment="Left" VerticalAlignment="Center"/>
         </StackPanel>
         <StackPanel Grid.Row="7" Orientation="Horizontal" Grid.ColumnSpan="3">
             <Label Content="City" Width="100" HorizontalAlignment="Left" VerticalAlignment="Center" Padding="10" FontWeight="Bold"/>
-            <TextBox x:Name="City" Padding="10" Width="300" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <TextBox Text="{Binding Contact.City}" x:Name="City" Padding="10" Width="300" HorizontalAlignment="Left" VerticalAlignment="Center"/>
         </StackPanel>
 
-        <Button Grid.Row="8" Width="400" Padding="8" Margin="0, 30, 0 , 0" Content="Save"  FontWeight="Bold" FontFamily="Georgia Pro Cond Black" />
+        <Button Command="{Binding SaveCommand}"  Grid.Row="8" Width="400" Padding="8" Margin="0, 30, 0 , 0" Content="Save"  FontWeight="Bold" FontFamily="Georgia Pro Cond Black" />
 
 
 

@@ -7,14 +7,21 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace ContactListMainApp.ViewModels;
 
-public partial class ContactsListViewModel(IContactService contactService, IServiceProvider serviceProvider) : ObservableObject
+public partial class ContactsListViewModel : ObservableObject
 {
-    private readonly IContactService _contactService = contactService;
-    private readonly IServiceProvider _serviceProvider = serviceProvider;
+    private readonly IContactService _contactService;
+    private readonly IServiceProvider _serviceProvider;
 
     [ObservableProperty]
     private ObservableCollection<Contact> _contacts = [];
 
+    public ContactsListViewModel(IContactService contactService, IServiceProvider serviceProvider)
+    {
+        _contactService = contactService;
+        _serviceProvider = serviceProvider;
+
+        _contacts = new ObservableCollection<Contact>(_contactService.GetAll());
+    }
 
     [RelayCommand]
     private void GoToAddContact()

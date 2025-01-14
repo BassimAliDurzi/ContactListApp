@@ -2,16 +2,10 @@
 
 namespace Business.Services;
 
-public class FileService : IFileService
+public class FileService(string basePath, string fileName) : IFileService
 {
-    private readonly string _directoryPath;
-    private readonly string _filePath;
-
-    public FileService(string fileName, string v)
-    {
-        _directoryPath = "Data";
-        _filePath = Path.Combine(_directoryPath, fileName);
-    }
+    private readonly string _directoryPath = Path.Combine(basePath, "Data");
+    private readonly string _filePath = Path.Combine(basePath, fileName);
 
     public string GetContentFromFile()
     {

@@ -56,10 +56,9 @@ public class MenuDialogs(IContactService contactService)
         form.PhoneNumber = ValidatePhoneNumber("Phone Number");
         form.Street = ValidateStreet("Street");
         form.PostalCode = ValidatePostalCode("Postal Code");
-
         form.City = ValidateName("City");
 
-        var result = _contactService.save(form);
+        var result = _contactService.Create(form);
 
         if (result)
         {
@@ -89,9 +88,8 @@ public class MenuDialogs(IContactService contactService)
             count++;
             Console.WriteLine($"Contact: {count}" +
                 $"\n " +
-                $"\n{contact.FirstName} {contact.LastName}" +
-                $"\n{contact.Email}" +
-                $"\n{contact.PhoneNumber}" +
+                $"\n{contact.FullName}" +
+                $"\n{contact.ContactInfo}" +
                 $"\n{contact.Street}, {contact.PostalCode} {contact.City}" +
                 $"\n-------------------------------------------------------");
         }
