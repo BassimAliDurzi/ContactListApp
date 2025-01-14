@@ -59,11 +59,11 @@
             <TextBox Text="{Binding Contact.City}" x:Name="City" Padding="10" Width="300" HorizontalAlignment="Left" VerticalAlignment="Center"/>
         </StackPanel>
 
-        <Button Command="{Binding SaveCommand}"  Grid.Row="8" Width="400" Padding="8" Margin="0, 30, 0 , 0" Content="Save"  FontWeight="Bold" FontFamily="Georgia Pro Cond Black" />
+        <Button Command="{Binding SaveCommand}"  Grid.Row="8" Width="400" Padding="8" Margin="0, 30, 0 , 0" Content="Save"  FontWeight="Bold" FontFamily="Georgia Pro Cond Black" Cursor="Hand" BorderThickness="0,0,0,0" BorderBrush="{x:Null}" />
 
 
 
-        <Button Grid.Row="10" Width="150" Padding="8" Content="Go Back" Command="{Binding GoToContactsCommand}"  FontWeight="Bold" FontFamily="Georgia Pro Cond Black"/>
+        <Button Grid.Row="10" Width="150" Padding="8" Content="Go Back" Command="{Binding GoToContactsCommand}"  FontWeight="Bold" FontFamily="Georgia Pro Cond Black" BorderThickness="0,0,0,0" BorderBrush="#FF707070" Cursor="Hand"/>
 
     </Grid>
 

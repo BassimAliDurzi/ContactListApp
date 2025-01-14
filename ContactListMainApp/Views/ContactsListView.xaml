@@ -46,7 +46,7 @@
 
 
 
-        <Button Grid.Row="2" Padding="8" Width="150" Content="Create New Contact" Command="{Binding GoToAddContactCommand}"  FontWeight="Bold" FontFamily="Georgia Pro Cond Black"/>
+        <Button Grid.Row="2" Padding="8" Width="150" Content="Create New Contact" Command="{Binding GoToAddContactCommand}"  FontWeight="Bold" FontFamily="Georgia Pro Cond Black" BorderThickness="0,0,0,0" Cursor="Hand"/>
 
     </Grid>
 </UserControl>
