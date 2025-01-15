@@ -11,5 +11,7 @@ namespace Business.Interfaces
 
         bool Update(Contact contact);
 
+        bool Delete(Contact contact);
+
     }
 }

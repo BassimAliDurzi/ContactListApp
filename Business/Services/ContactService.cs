@@ -46,6 +46,7 @@ public class ContactService(IFileService fileService) : IContactService
 
     }
 
+
     public bool Update(Contact contact)
     {
         var index = _contacts.FindIndex(c => c.Id == contact.Id);
@@ -61,5 +62,26 @@ public class ContactService(IFileService fileService) : IContactService
 
         var result = _fileService.SaveContentToFile(json);
         return result;
+    }
+
+
+
+    public bool Delete(Contact contact)
+    {
+        var index = _contacts.FindIndex(c => c.Id == contact.Id);
+
+        if (index == -1)
+        {
+            return false;
+        }
+
+        _contacts[index] = contact;
+        _contacts.Remove(contact);
+
+        var json = JsonSerializer.Serialize(_contacts);
+
+        var result = _fileService.SaveContentToFile(json);
+        return result;
+
     }
 }

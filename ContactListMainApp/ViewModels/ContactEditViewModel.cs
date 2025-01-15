@@ -15,7 +15,7 @@ public partial class ContactEditViewModel(IContactService contactService, IServi
 
 
     [ObservableProperty]
-    private Contact _contact = new Contact();
+    private Contact _contact = new();
 
 
     [RelayCommand]
