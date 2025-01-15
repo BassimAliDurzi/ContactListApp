@@ -30,4 +30,15 @@ public partial class ContactsListViewModel : ObservableObject
         mainViewModel.CurrentViewModel = _serviceProvider.GetRequiredService<ContactAddViewModel>();
     }
 
+    [RelayCommand]
+    private void GoToDetailsView(Contact contact)
+    {
+        var contactDetailsViewModel = _serviceProvider.GetRequiredService<ContactDetailsViewModel>();
+        contactDetailsViewModel.Contact = contact;
+
+
+        var mainViewModel = _serviceProvider.GetRequiredService<MainViewModel>();
+        mainViewModel.CurrentViewModel = contactDetailsViewModel;
+    }
+
 }

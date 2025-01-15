@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="ContactListMainApp.Views.ContactDetailsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ContactListMainApp.Views"
+             xmlns:viewmodles="clr-namespace:ContactListMainApp.ViewModels"
+             xmlns:models="clr-namespace:Business.Models;assembly=Business"
+             d:DataContext="{d:DesignInstance Type=viewmodles:ContactDetailsViewModel}"
+             mc:Ignorable="d" 
+             
+             Background="White"
+             d:DesignHeight="800" d:DesignWidth="500">
+
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Contact Details"  HorizontalAlignment="Center" FontSize="20" FontFamily="Georgia Pro Cond Black" FontWeight="Bold"/>
+
+        <StackPanel Grid.Row="1" Margin="0 40 0 0">
+            <TextBlock Text="First Name" FontWeight="Bold"/>
+            <TextBlock Text="{Binding Contact.FirstName}" Margin="0,0,0,10" Padding="4"/>
+
+            <TextBlock Text="Last Name" FontWeight="Bold"/>
+            <TextBlock Text="{Binding Contact.LastName}" Margin="0,0,0,10" Padding="4"/>
+
+            <TextBlock Text="Email" FontWeight="Bold"/>
+            <TextBlock Text="{Binding Contact.Email}" Margin="0,0,0,10" Padding="4"/>
+
+            <TextBlock Text="Phone Number" FontWeight="Bold"/>
+            <TextBlock Text="{Binding Contact.PhoneNumber}" Margin="0,0,0,10" Padding="4"/>
+
+            <TextBlock Text="Street" FontWeight="Bold"/>
+            <TextBlock Text="{Binding Contact.Street}" Margin="0,0,0,10" Padding="4"/>
+
+            <TextBlock Text="Postal Code" FontWeight="Bold"/>
+            <TextBlock Text="{Binding Contact.PostalCode}" Margin="0,0,0,10" Padding="4"/>
+
+            <TextBlock Text="City" FontWeight="Bold"/>
+            <TextBlock Text="{Binding Contact.City}" Margin="0,0,0,10" Padding="4"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2">
+            <Button Command="{Binding GoToEditViewCommand}" Content="Edit" Margin="0 10 0 5" Padding="5" FontSize="14" FontWeight="Bold" Cursor="Hand" BorderThickness="0,0,0,0" BorderBrush="{x:Null}"/>
+            <Button Command="{Binding CancelCommand}" Content="Cancel" Margin="0 5 0 10" Padding="5" FontSize="14" FontWeight="Bold" Cursor="Hand" BorderThickness="0,0,0,0" BorderBrush="{x:Null}"/>
+        </StackPanel>
+
+    </Grid>
+</UserControl>

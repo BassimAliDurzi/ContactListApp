@@ -56,3 +56,7 @@ D:\Cources\.NET webbutvecklare - EC\03 C#\ContactListApp\ContactListMainApp\obj\
 D:\Cources\.NET webbutvecklare - EC\03 C#\ContactListApp\ContactListMainApp\obj\Debug\net9.0-windows\Views\ContactsListView.baml
 D:\Cources\.NET webbutvecklare - EC\03 C#\ContactListApp\ContactListMainApp\obj\Debug\net9.0-windows\Views\ContactAddView.g.cs
 D:\Cources\.NET webbutvecklare - EC\03 C#\ContactListApp\ContactListMainApp\obj\Debug\net9.0-windows\Views\ContactAddView.baml
+D:\Cources\.NET webbutvecklare - EC\03 C#\ContactListApp\ContactListMainApp\obj\Debug\net9.0-windows\Views\ContactDetailsView.g.cs
+D:\Cources\.NET webbutvecklare - EC\03 C#\ContactListApp\ContactListMainApp\obj\Debug\net9.0-windows\Views\ContactEditView.g.cs
+D:\Cources\.NET webbutvecklare - EC\03 C#\ContactListApp\ContactListMainApp\obj\Debug\net9.0-windows\Views\ContactDetailsView.baml
+D:\Cources\.NET webbutvecklare - EC\03 C#\ContactListApp\ContactListMainApp\obj\Debug\net9.0-windows\Views\ContactEditView.baml

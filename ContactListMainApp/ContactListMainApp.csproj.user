@@ -10,6 +10,12 @@
     <Compile Update="Views\ContactAddView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\ContactDetailsView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\ContactEditView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\ContactsListView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -19,6 +25,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\ContactAddView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ContactDetailsView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ContactEditView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\ContactsListView.xaml">

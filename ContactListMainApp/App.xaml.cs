@@ -23,14 +23,20 @@ public partial class App : Application
                 services.AddSingleton<IFileService>(new FileService(@"C:\Users\bassi\OneDrive\Desktop", "contacts.json"));
                 services.AddSingleton<IContactService, ContactService>();
 
-                services.AddSingleton<MainViewModel>();
-                services.AddSingleton<MainWindow>();
+                
 
                 services.AddTransient<ContactsListViewModel>();
-                services.AddTransient<ContactsView>();
-
                 services.AddTransient<ContactAddViewModel>();
+                services.AddTransient<ContactDetailsViewModel>();
+                services.AddTransient<ContactEditViewModel>();
+
+                services.AddTransient<ContactsView>();
                 services.AddTransient<AddContactView>();
+                services.AddTransient<ContactDetailsView>();
+                services.AddTransient<ContactEditView>();
+
+                services.AddSingleton<MainViewModel>();
+                services.AddSingleton<MainWindow>();
             })
             .Build();
     }
