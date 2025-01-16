@@ -11,16 +11,16 @@
              
              mc:Ignorable="d" 
              Background="White"
-             d:DesignHeight="800" d:DesignWidth="500">
+             d:DesignHeight="768" d:DesignWidth="400">
 
-    <Grid>
+    <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="0" Text="Contacts List" HorizontalAlignment="Center" FontSize="20" FontFamily="Georgia Pro Cond Black" FontWeight="Bold"/>
+        <TextBlock Grid.Row="0" Text="Contacts List" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold"/>
 
         <ListView Grid.Row="1" ItemsSource="{Binding Contacts}" Margin="0 20">
             <ListView.ItemTemplate>
@@ -32,16 +32,16 @@
                             <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
 
-                        <StackPanel Grid.Column="0" Width="380">
+                        <StackPanel Grid.Column="0" Width="380" Background="AntiqueWhite">
                             <TextBlock Text="{Binding FullName}" FontWeight="Bold" Padding="10 5 0 5"/>
                             <TextBlock Text="{Binding ContactInfo}" Padding="10 0"/>
                             <TextBlock Text="{Binding Address}" Padding="10 0 0 5"/>
                         </StackPanel>
 
-                        <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
+                        <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="4 0 0 0">
                             <Button CommandParameter="{Binding .}" 
                                     Command="{Binding DataContext.GoToDetailsViewCommand, RelativeSource={RelativeSource AncestorType=UserControl}}"  
-                                    Content="&#xE712;" FontFamily="Segoe MDL2 Assets" Padding="7 0" Background="LightGray" />
+                                    Content="&#xE712;" FontFamily="Segoe MDL2 Assets" Padding="7 0" Background="LightSkyBlue" BorderThickness="0" />
                         </StackPanel>
                         
                     </Grid>
@@ -51,7 +51,7 @@
 
 
 
-        <Button Grid.Row="2" Padding="8" Width="150" Content="Create New Contact" Command="{Binding GoToAddContactCommand}"  FontWeight="Bold" FontFamily="Georgia Pro Cond Black" BorderThickness="0,0,0,0" Cursor="Hand"/>
+        <Button Grid.Row="2" Padding="8" Width="150" Content="Create New Contact" Background="Orange" Command="{Binding GoToAddContactCommand}"  FontWeight="Bold" BorderThickness="0,0,0,0" Cursor="Hand" Click="Button_Click"/>
 
     </Grid>
 </UserControl>

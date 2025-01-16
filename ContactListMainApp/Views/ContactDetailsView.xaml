@@ -10,7 +10,7 @@
              mc:Ignorable="d" 
              
              Background="White"
-             d:DesignHeight="800" d:DesignWidth="500">
+             d:DesignHeight="768" d:DesignWidth="400">
 
 
     <Grid Margin="20">
@@ -20,35 +20,35 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="0" Text="Contact Details"  HorizontalAlignment="Center" FontSize="20" FontFamily="Georgia Pro Cond Black" FontWeight="Bold"/>
+        <TextBlock Grid.Row="0" Text="Contact Details"  HorizontalAlignment="Center" FontSize="20" FontWeight="Bold"/>
 
-        <StackPanel Grid.Row="1" Margin="0 40 0 0">
-            <TextBlock Text="First Name" FontWeight="Bold"/>
-            <TextBlock Text="{Binding Contact.FirstName}" Margin="0,0,0,10" Padding="4"/>
+        <StackPanel Grid.Row="1" Margin="0 20">
+            <TextBlock Text=" First Name" HorizontalAlignment="Left" VerticalAlignment="Center" Padding="10" FontWeight="Bold" />
+            <TextBlock Text="{Binding Contact.FirstName}" Padding="4" Width="380" Background="pink" TextAlignment="Center"/>
 
-            <TextBlock Text="Last Name" FontWeight="Bold"/>
-            <TextBlock Text="{Binding Contact.LastName}" Margin="0,0,0,10" Padding="4"/>
+            <TextBlock Text=" Last Name" HorizontalAlignment="Left" VerticalAlignment="Center" Padding="10" FontWeight="Bold"/>
+            <TextBlock Text="{Binding Contact.LastName}" Padding="4" Width="380" Background="pink" TextAlignment="Center"/>
 
-            <TextBlock Text="Email" FontWeight="Bold"/>
-            <TextBlock Text="{Binding Contact.Email}" Margin="0,0,0,10" Padding="4"/>
+            <TextBlock Text=" Email" HorizontalAlignment="Left" VerticalAlignment="Center" Padding="10" FontWeight="Bold"/>
+            <TextBlock Text="{Binding Contact.Email}" Padding="4" Width="380" Background="pink" TextAlignment="Center"/>
 
-            <TextBlock Text="Phone Number" FontWeight="Bold"/>
-            <TextBlock Text="{Binding Contact.PhoneNumber}" Margin="0,0,0,10" Padding="4"/>
+            <TextBlock Text=" Phone Number" HorizontalAlignment="Left" VerticalAlignment="Center" Padding="10" FontWeight="Bold"/>
+            <TextBlock Text="{Binding Contact.PhoneNumber}" Padding="4" Width="380" Background="pink" TextAlignment="Center"/>
 
-            <TextBlock Text="Street" FontWeight="Bold"/>
-            <TextBlock Text="{Binding Contact.Street}" Margin="0,0,0,10" Padding="4"/>
+            <TextBlock Text=" Street" HorizontalAlignment="Left" VerticalAlignment="Center" Padding="10" FontWeight="Bold"/>
+            <TextBlock Text="{Binding Contact.Street}" Padding="4" Width="380" Background="pink" TextAlignment="Center"/>
 
-            <TextBlock Text="Postal Code" FontWeight="Bold"/>
-            <TextBlock Text="{Binding Contact.PostalCode}" Margin="0,0,0,10" Padding="4"/>
+            <TextBlock Text=" Postal Code" HorizontalAlignment="Left" VerticalAlignment="Center" Padding="10" FontWeight="Bold"/>
+            <TextBlock Text="{Binding Contact.PostalCode}" Padding="4" Width="380" Background="pink" TextAlignment="Center"/>
 
-            <TextBlock Text="City" FontWeight="Bold"/>
-            <TextBlock Text="{Binding Contact.City}" Margin="0,0,0,10" Padding="4"/>
+            <TextBlock Text=" City" HorizontalAlignment="Left" VerticalAlignment="Center" Padding="10" FontWeight="Bold"/>
+            <TextBlock Text="{Binding Contact.City}" Padding="4" Width="380" Background="pink" TextAlignment="Center"/>
         </StackPanel>
 
         <StackPanel Grid.Row="2">
-            <Button Command="{Binding GoToEditViewCommand}" Content="Edit" Margin="0 10 0 5" Padding="5" FontSize="14" FontWeight="Bold" Cursor="Hand" BorderThickness="0,0,0,0" BorderBrush="{x:Null}"/>
-            <Button Command="{Binding DeleteContactCommand}" Content="Delete" Margin="0 5 0 10" Padding="5" FontSize="14" FontWeight="Bold" Cursor="Hand" BorderThickness="0,0,0,0" BorderBrush="{x:Null}"/>
-            <Button Command="{Binding CancelCommand}" Content="Cancel" Margin="0 5 0 10" Padding="5" FontSize="14" FontWeight="Bold" Cursor="Hand" BorderThickness="0,0,0,0" BorderBrush="{x:Null}"/>
+            <Button Command="{Binding GoToEditViewCommand}" Content="Edit" Width="380"  Margin="0, 10" Padding="8"  FontWeight="Bold" Background="GreenYellow" Cursor="Hand" BorderThickness="0,0,0,0" BorderBrush="{x:Null}"/>
+            <Button Command="{Binding DeleteContactCommand}" Content="Delete" Width="380" Margin="0, 10" Padding="8"  FontWeight="Bold" Background="IndianRed" Cursor="Hand" BorderThickness="0,0,0,0" BorderBrush="{x:Null}"/>
+            <Button Command="{Binding CancelCommand}" Content="Cancel" Width="380" Margin="0, 10" Padding="8"  FontWeight="Bold" Background="LightBlue" Cursor="Hand" BorderThickness="0,0,0,0" BorderBrush="{x:Null}"/>
         </StackPanel>
 
     </Grid>
